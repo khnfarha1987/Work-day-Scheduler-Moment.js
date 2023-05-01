@@ -1,6 +1,6 @@
 var $currentDay = $("#currentDay");
 var $timeBlocks = $(".time-block");
-var $scheduleArea = $(".schedule");
+var $schArea = $(".schedule");
 
 var toDoItems = [];
 //each object has a hour property and a text property:
@@ -105,7 +105,7 @@ $(document).ready(function () {
     //render schedule from local storage
     renderSchedule();
     //when a todo item save button is clicked, save it
-    $scheduleArea.on("click", "button", saveHandler);
+    $schArea.on("click", "button", saveHandler);
 
 });
 
