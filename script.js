@@ -88,4 +88,25 @@ function saveHandler() {
     renderSchedule();
 }
 
+// when the document loads
+$(document).ready(function () {
+
+    //timeblocks depending on time
+    setUpTimeBlocks();
+    //if there's nothing for the todos in local storage
+    if (!localStorage.getItem("todos")) {
+        //initialize the array of objects
+        initializeSchedule();
+    } //otherwise dont bother bc we get it from local storage
+
+    //display current date
+    $currentDay.text(currentDate);
+
+    //render schedule from local storage
+    renderSchedule();
+    //when a todo item save button is clicked, save it
+    $scheduleArea.on("click", "button", saveHandler);
+
+});
+
 
