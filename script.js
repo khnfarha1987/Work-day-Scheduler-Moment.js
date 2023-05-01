@@ -32,5 +32,27 @@ function initializeSchedule() {
     //console.log(toDoItems);
 }
 
+//color changes: timeblock colors depending on time and depends on past, present and future.
+function setUpTimeBlocks() {
+    $timeBlocks.each(function () {
+        var $thisBlock = $(this);
+        var thisBlockHr = parseInt($thisBlock.attr("data-hour"));
+
+        //add style to time blocks to show where we are in the day
+        if (thisBlockHr == currentHour) {
+            //color for present
+            $thisBlock.addClass("present").removeClass("past future");
+        }
+        if (thisBlockHr < currentHour) {
+            //color for past
+            $thisBlock.addClass("past").removeClass("present future");
+        }
+        if (thisBlockHr > currentHour) {
+            //color for future
+            $thisBlock.addClass("future").removeClass("past present");
+        }
+    });
+}
+
 
 
