@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  margin-top: 50px;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -42,13 +38,14 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  ;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-
+  padding-top: 10px;
 }
 
 .past {
@@ -70,11 +67,11 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #06AED5;
   color: white;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }

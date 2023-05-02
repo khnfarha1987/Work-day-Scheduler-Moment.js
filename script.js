@@ -1,14 +1,17 @@
+//created vars for day, time and schedule
 var $currentDay = $("#currentDay");
 var $timeBlocks = $(".time-block");
-var $schArea = $(".schedule");
+var $scheduleArea = $(".schedule");
 
+//Created one array
 var toDoItems = [];
-//each object has a hour property and a text property:
+//each object has a hour property and a text property
 
+//Used [Moment.js](https://momentjs.com/) for date and hour format
 var currentDate = moment().format("dddd, MMMM Do");
 var currentHour = moment().format("H");
 
-//Create array of objects:
+//if we don't have any todos set up, let's set up the array of objects
 function initializeSchedule() {
     //  console.log(toDoItems);
 
@@ -27,12 +30,12 @@ function initializeSchedule() {
         toDoItems.push(todoObj);
     });
 
-    //once we have looped timeblocks then save this array of objects to local storage by stringifying it first
+    //once we have looped thru timeblocks, save this array of objects to local storage by stringifying it first
     localStorage.setItem("todos", JSON.stringify(toDoItems));
     //console.log(toDoItems);
 }
 
-//color changes: timeblock colors depending on time and depends on past, present and future.
+//format timeblock colors depending on time
 function setUpTimeBlocks() {
     $timeBlocks.each(function () {
         var $thisBlock = $(this);
@@ -40,15 +43,15 @@ function setUpTimeBlocks() {
 
         //add style to time blocks to show where we are in the day
         if (thisBlockHr == currentHour) {
-            //color for present
+            //for present time
             $thisBlock.addClass("present").removeClass("past future");
         }
         if (thisBlockHr < currentHour) {
-            //color for past
+            //for past time
             $thisBlock.addClass("past").removeClass("present future");
         }
         if (thisBlockHr > currentHour) {
-            //color for future
+            //for future time
             $thisBlock.addClass("future").removeClass("past present");
         }
     });
@@ -59,7 +62,7 @@ function renderSchedule() {
     toDoItems = localStorage.getItem("todos");
     toDoItems = JSON.parse(toDoItems);
 
-    //loop array then assign the text to the timeBlock with data-hour equal to hour. 
+    //loop thru array then assign the text to the timeBlock with data-hour equal to hour. 
     //make a variable where [data-hour={hour}] then plug it in to the selector $('[data-hour={hour}')
     for (var i = 0; i < toDoItems.length; i++) {
         var itemHour = toDoItems[i].hour;
@@ -77,7 +80,7 @@ function saveHandler() {
     var hourToUpdate = $(this).parent().attr("data-hour");
     var itemToAdd = (($(this).parent()).children("textarea")).val();
 
-    //which item we need to update based on the hour of the button clicked matching
+    //see which item we need to update based on the hour of the button clicked matching
     for (var j = 0; j < toDoItems.length; j++) {
         if (toDoItems[j].hour == hourToUpdate) {
             //set its text to what was added to textarea
@@ -91,7 +94,7 @@ function saveHandler() {
 // when the document loads
 $(document).ready(function () {
 
-    //timeblocks depending on time
+    //format the timeblocks depending on time
     setUpTimeBlocks();
     //if there's nothing for the todos in local storage
     if (!localStorage.getItem("todos")) {
@@ -105,8 +108,6 @@ $(document).ready(function () {
     //render schedule from local storage
     renderSchedule();
     //when a todo item save button is clicked, save it
-    $schArea.on("click", "button", saveHandler);
+    $scheduleArea.on("click", "button", saveHandler);
 
 });
-
-
