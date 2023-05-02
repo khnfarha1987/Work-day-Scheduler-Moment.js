@@ -26,3 +26,5 @@ Depends on time present, past and future.
 # Application deployed at live URL:
 https://khnfarha1987.github.io/Work-day-Scheduler-Moment.js/
 
+# Application GitHub URL submitted:
+https://github.com/khnfarha1987/Work-day-Scheduler-Moment.js
