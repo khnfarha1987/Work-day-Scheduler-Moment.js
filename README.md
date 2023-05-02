@@ -22,3 +22,7 @@ Depends on time present, past and future.
 
 # Persist events between refreshes of a page
 ![alt](./images/img-6.png)
+
+# Application deployed at live URL:
+https://khnfarha1987.github.io/Work-day-Scheduler-Moment.js/
+
