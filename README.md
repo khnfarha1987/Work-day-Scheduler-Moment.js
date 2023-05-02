@@ -29,5 +29,5 @@ https://khnfarha1987.github.io/Work-day-Scheduler-Moment.js/
 # Application GitHub URL submitted:
 https://github.com/khnfarha1987/Work-day-Scheduler-Moment.js
 
-# whole challenge movie:
+# video clip of this challenge:
 ![alt](./images/movie.gif)
