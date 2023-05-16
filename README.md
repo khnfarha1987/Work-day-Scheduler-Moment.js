@@ -10,11 +10,20 @@ Challenge 7 : In this Challenge, we need to create a simple calendar application
   * Save the event in local storage when the save button is clicked in that timeblock.
   * Persist events between refreshes of a page.
 
+# Description of this Project:
+   * User Story of this project-
+   * AS AN employee with a busy schedule
+   * I WANT to add important events to a daily planner
+   * SO THAT I can manage my time effectively 
+  
+   Created a simple calendar application that allows a user to save events for each hour of the day.
+   Depends on time present, past and future.
 
-# Description:
-Created a simple calendar application that allows a user to save events for each hour of the day by modifying starter code.
-The goal was to create a scheduler for each hour of a 9-5 workday using local storage and time supported by moment.js.
-Depends on time present, past and future.
+   The goal was to create a scheduler for each hour of a 9-5 workday using local storage and time supported by moment.js.
+
+   The user inputs calendar items into the text area, and clicking the save buttons sets the items into local storage. The added calendar items persist on the page after refresh.
+
+   This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Local storage was used to allow the input of the user to persist even when the browser has been opened and closed or refreshed.
 
 # Display the current day at the top of the calender when a user opens the planner.
 ![alt](./images/img-1.png)
