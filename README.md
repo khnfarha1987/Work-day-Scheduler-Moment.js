@@ -50,11 +50,11 @@ Challenge 7 : In this Challenge, we need to create a simple calendar application
   * Persist events between refreshes of a page
   ![alt](./images/img-6.png)
 
-# Application deployed at live URL:
-https://khnfarha1987.github.io/Work-day-Scheduler-Moment.js/
+# Video Link of this Project:
+![alt](./images/movie.gif)
 
-# Application GitHub URL submitted:
+# Application GitHub URL:
 https://github.com/khnfarha1987/Work-day-Scheduler-Moment.js
 
-# video clip of this challenge:
-![alt](./images/movie.gif)
+# Application Deployed live URL:
+https://khnfarha1987.github.io/Work-day-Scheduler-Moment.js/
